@@ -15,13 +15,12 @@ Se utilizó un Dockerfile multi-etapa para optimizar el almacenamiento en el ser
 - La ejecución remota mediante comandos SSH para actualizar el contenedor en tiempo real.
 
 ## 3. Evidencias
-- **Pipeline de CD Exitoso:** ![Pipeline](./img/pipeline_cd.png)
+- **Pipeline de CD Exitoso:** ![Pipeline](./img/pipeline_cd.png) ![Pipeline2](./img/pipeline_cd2.png)
 - **API funcionando en IP Pública:** ![API](./img/api_aws.png)
-*(Nota: Asegúrate de capturar la IP de AWS en la barra de direcciones del navegador)*
 - **Evidencia del escaneo de vulnerabilidades (Trivy):**
 En el pipeline se integró *Trivy* para analizar la imagen de Docker antes del despliegue. Esta herramienta escaneó el sistema operativo base (Alpine Linux) y las librerías de Node.js en busca de vulnerabilidades críticas o altas (CRITICAL, HIGH). 
-![Escaneo de Vulnerabilidades](./img/lab52_trivy.png)
-*(Nota: El uso de la imagen `node:20-alpine` redujo significativamente la superficie de ataque en comparación con imágenes base completas).*
+![Escaneo de Vulnerabilidades](./img/trivy.png)
+
 
 ## 4. Rollback
 Para revertir una versión, se utilizarían etiquetas específicas en lugar de `latest`. En caso de fallo, se ejecutaría:
