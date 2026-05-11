@@ -5,7 +5,7 @@ app.use(express.json());
 
 let sensors = [
   { id: 1, name: 'Sensor Temperatura', device: 'ESP32 Devkit V1 Type C', value: 25.4 },
-  { id: 2, name: 'Sensor Humedad', device: 'Arduino Uno', value: 60.0 }
+  { id: 2, name: 'Sensor Humedad', device: 'Arduino Uno', value: 10.0 }
 ];
 
 app.get('/health', (req, res) => {
